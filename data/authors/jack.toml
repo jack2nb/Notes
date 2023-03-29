@@ -1,0 +1,12 @@
+id = "jack"  #根据id找到所有你的文章
+
+[email]
+username = "金"
+host = "gmail.com"
+
+[name]
+display = "金老师"
+
+[social]
+email = ""
+ 

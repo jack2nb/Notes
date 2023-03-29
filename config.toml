@@ -1,0 +1,120 @@
+# hugo server  -p 1234 
+# hugo -D -d public
+#  html 托管到 git clone https://jack2nb@bitbucket.org/jack2nb/i.git
+#  blog 托管到 jinlaoshi.netlify.app
+#  https://jack2nb.vercel.app  国内打不开
+
+# 话语权并不在手里，就不能什么都说，特别是对权力的冲突
+baseURL = "http://www.example.com"  
+languageCode = 'zh-cn'
+title = "让子弹飞一会" 
+copyright = "互联新时代人人都有一个小天地"
+theme = "minimo"
+disqusShortname = "jack2nb"
+googleAnalytics = ""
+Paginate = 8
+preserveTaxonomyNames = true
+enableRobotsTXT = true # generate robots.txt
+# Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
+pygmentsCodefences = true
+enableEmoji = true
+# Missing translations will default to this content language
+defaultContentLanguage = "zh"
+[params.info]
+description = "飞向一个数字新世界"
+title404 = "没有这个页面!"
+[markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  #设置这个后开启直接raw html
+
+
+[params.assets]
+favicon = "favicon.ico"
+customCSS = ["css/custom.css"]
+customJS = ["js/custom.js"]
+gopher = "" # used in 404 template ( Generator: https://gopherize.me )
+
+[params.copyright]
+prefix = ""
+holder = "金老师"
+startYear = "2019"
+suffix = ""
+
+[params.settings]
+# date & time format: https://golang.org/pkg/time/
+ 
+dateFormat = "2006-01-02"
+ 
+listDateFormat = "2006-01-02"
+archiveDateFormat = "01-02"
+hideEntryNavigation = ["page"] # boolean / array of sections
+hideEntryMeta = ["page"] # boolean / array of sections
+showReadingTime = true
+showLastmod = true
+taxonomyCloudShuffle = true
+accentColor = "#ffcd00"
+hideMainMenu = false
+
+[params.sidebar]
+enable = true
+
+[params.widgets]
+header = ["breadcrumbs"]
+homepage = ["recent_posts"]
+sidebar = ["about","search","sidebar_menu","taxonomy_cloud"]
+footer = ["social_menu"]
+
+[params.search]
+client = "fuse" # algolia / fuse / lunr 开启查找功能
+ 
+ 
+[params.opengraph.twitter]
+page = "" # Twitter page username
+
+[params.seo]
+# Title Separator: - – — · • * ⋆ | ~ « » < >
+titleSeparator = "•"
+
+[params.social]
+email = "jack2nb@qq.com"
+
+[params.comments]
+enable = false
+
+# Isso: https://posativ.org/isso/
+[params.comments.isso]
+enable = false
+scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
+dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
+
+ 
+# Utterances: https://utteranc.es
+[params.comments.utterances]
+enable = false
+issueTerm = "pathname" # pathname / url / title / og:title / <string>
+label = ""
+theme = "github-light"
+
+
+
+[taxonomies]
+author = "authors"
+category = "categories"
+series = "series"
+tag = "tags"
+
+[permalinks]
+page = "/:slug/"
+
+ 
+[blackfriday]
+hrefTargetBlank = true
+
+[languages]
+[languages.zh]
+lang = "zh"
+languageName = "Chinese"
+weight = 1
+
+
+ 
